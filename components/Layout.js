@@ -16,7 +16,7 @@ const Layout = ({ children = null }) => {
   const menuItems = [
     {
       label: 'Dashboard',
-      href: '/dash',
+      href: '/',
       icon: HomeIcon,
     },
     {
