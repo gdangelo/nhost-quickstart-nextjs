@@ -36,13 +36,15 @@ const Layout = ({ children = null }) => {
       <header className="fixed z-10 top-0 inset-x-0 h-[60px] shadow bg-white">
         <div className="container mx-auto px-4 py-3 flex justify-between">
           <div className="relative w-24">
-            <Link href="/dash">
-              <Image
-                src="/logo.svg"
-                alt="logo"
-                layout="fill"
-                objectFit="contain"
-              />
+            <Link href="/">
+              <a>
+                <Image
+                  src="/logo.svg"
+                  alt="logo"
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </a>
             </Link>
           </div>
 
