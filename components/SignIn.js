@@ -43,12 +43,6 @@ const SignIn = () => {
             Sign in
           </button>
         </form>
-
-        <Link href="/reset-password">
-          <a className="mt-4 text-blue-600 hover:text-blue-500 hover:underline hover:underline-offset-1 transition">
-            Forgot your password?
-          </a>
-        </Link>
       </div>
 
       <p className="sm:mt-8 text-gray-500 text-center">
