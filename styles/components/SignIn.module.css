@@ -93,3 +93,14 @@
     margin-top: 2rem;
   }
 }
+
+.verification-text {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.error-text {
+  margin-top: 1rem;
+  text-align: center;
+  color: rgb(239, 68, 68);
+}
