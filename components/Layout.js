@@ -12,6 +12,8 @@ import {
 } from '@heroicons/react/outline';
 import Avatar from './Avatar';
 
+import UserContext from '../UserContext';
+
 const Layout = ({ children = null }) => {
   const user = null;
 
@@ -102,7 +104,7 @@ const Layout = ({ children = null }) => {
 
       <main className={styles.main}>
         <div className={styles['main-container']}>
-          {React.cloneElement(children, { user })}
+          <UserContext.Provider user={user}>{children}</UserContext.Provider>
         </div>
       </main>
     </div>
