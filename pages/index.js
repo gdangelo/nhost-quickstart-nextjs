@@ -3,9 +3,7 @@ import styles from '../styles/pages/Home.module.css';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-export default function Home() {
-  const user = null;
-
+export default function Home({ user = null }) {
   return (
     <Layout>
       <Head>

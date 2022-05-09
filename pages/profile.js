@@ -5,9 +5,7 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 import Input from '../components/Input';
 
-const Profile = () => {
-  const user = null;
-
+const Profile = ({ user = null }) => {
   const [firstName, setFirstName] = useState(user?.metadata?.firstName ?? '');
   const [lastName, setLastName] = useState(user?.metadata?.lastName ?? '');
 

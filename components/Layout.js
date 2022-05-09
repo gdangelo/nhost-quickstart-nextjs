@@ -1,6 +1,6 @@
 import styles from '../styles/components/Layout.module.css';
 
-import { Fragment } from 'react';
+import React, { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, Transition } from '@headlessui/react';
@@ -101,7 +101,9 @@ const Layout = ({ children = null }) => {
       </header>
 
       <main className={styles.main}>
-        <div className={styles['main-container']}>{children}</div>
+        <div className={styles['main-container']}>
+          {React.cloneElement(children, { user })}
+        </div>
       </main>
     </div>
   );
