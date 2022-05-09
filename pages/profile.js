@@ -1,14 +1,13 @@
 import styles from '../styles/pages/Profile.module.css';
 
-import { useState, useContext } from 'react';
+import { useState } from 'react';
+import { useUserContext } from '../UserProvider';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 import Input from '../components/Input';
 
-import UserContext from '../UserContext';
-
 const Profile = () => {
-  const user = useContext(UserContext);
+  const { user } = useUserContext();
 
   const [firstName, setFirstName] = useState(user?.metadata?.firstName ?? '');
   const [lastName, setLastName] = useState(user?.metadata?.lastName ?? '');

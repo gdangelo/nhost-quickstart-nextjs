@@ -1,13 +1,11 @@
 import styles from '../styles/pages/Home.module.css';
 
-import { useContext } from 'react';
+import { useUserContext } from '../UserProvider';
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-import UserContext from '../UserContext';
-
 export default function Home() {
-  const user = useContext(UserContext);
+  const { user } = useUserContext();
 
   return (
     <Layout>

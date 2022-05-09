@@ -1,6 +1,7 @@
 import styles from '../styles/components/Layout.module.css';
 
 import React, { Fragment } from 'react';
+import { useUserContext } from '../UserProvider';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, Transition } from '@headlessui/react';
@@ -12,10 +13,8 @@ import {
 } from '@heroicons/react/outline';
 import Avatar from './Avatar';
 
-import UserContext from '../UserContext';
-
 const Layout = ({ children = null }) => {
-  const user = null;
+  const { user } = useUserContext();
 
   const menuItems = [
     {
@@ -103,9 +102,7 @@ const Layout = ({ children = null }) => {
       </header>
 
       <main className={styles.main}>
-        <div className={styles['main-container']}>
-          <UserContext.Provider user={user}>{children}</UserContext.Provider>
-        </div>
+        <div className={styles['main-container']}>{children}</div>
       </main>
     </div>
   );
